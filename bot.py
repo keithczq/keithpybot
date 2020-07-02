@@ -19,7 +19,7 @@ class telegram_chatbot():
     def send_message(self, msg, chat_id):
         url = self.base + "sendMessage?chat_id={}&text={}".format(chat_id, msg)
         if msg is not None:
-            requests.get(url)
+            requests.post(url)
 
     def read_token_from_config_file(self, config):
         parser = cfg.ConfigParser()
